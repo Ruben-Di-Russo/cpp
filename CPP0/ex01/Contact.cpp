@@ -6,7 +6,7 @@
 /*   By: rdi-russ <rdi-russ@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:59:06 by rdi-russ          #+#    #+#             */
-/*   Updated: 2023/01/30 13:06:39 by rdi-russ         ###   ########.fr       */
+/*   Updated: 2023/02/01 18:21:03 by rdi-russ         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,36 @@ Contact::Contact(void)
 Contact::~Contact(void)
 {
 	return;
+}
+
+void		Contact::setFirstName(std::string fn)
+{
+	this->FirstName = fn;
+	
+}
+void		Contact::setIndex(int index)
+{
+	this->index = index;
+}
+
+void	Contact::setLastName(std::string ln)
+{
+	this->LastName = ln;
+}
+
+void		Contact::setNickName(std::string nm)
+{
+	this->NickName = nm;
+}
+
+void		Contact::setNumber(std::string num)
+{
+	this->Number = num;
+}
+
+void		Contact::setSecret(std::string sec)
+{
+	this->Secret = sec;
 }
 
 std::string	Contact::getIndex()
@@ -54,45 +84,54 @@ std::string Contact::getSecret()
 
 bool	Contact::saveContact(int id)
 {
-	this->index = id;
-	
+	//this->index = id;
+	this->setIndex(id);
+	std::string fn;
+	std::string ln;
+	std::string nm;
+	std::string num;
+	std::string sec;
 	std::cout << "Please enter you first name" << std::endl;
 	std::cin.ignore();
-	std::getline(std::cin, this->FirstName);
-	if(this->FirstName.empty())
+	std::getline(std::cin, fn);
+	if(fn.empty())
 		{
 			std::cout << "No FirstName input detected ...restart" << std::endl;
 			return(this->saveContact(id));
 		}
+	this->setFirstName(fn);
 	std::cout << "Please enter your last name" << std::endl;
-	std::getline(std::cin, this->LastName);
-	if(this->LastName.empty())
+	std::getline(std::cin, ln);
+	if(ln.empty())
 		{
 			std::cout << "No LastName input detected ...restart" << std::endl;
 			return(this->saveContact(id));
 		}	
-
+	this->setLastName(ln);
 	std::cout << "Please enter your nickname" << std::endl;
-	std::getline(std::cin, this->NickName);
-	if(this->NickName.empty())
+	std::getline(std::cin, nm);
+	if(nm.empty())
 		{
 			std::cout << "No NickName input detected ...restart" << std::endl;
 			return(this->saveContact(id));
-		}			
+		}
+	this->setNickName(nm);		
 	std::cout << "Please enter your phone number" << std::endl;
-	std::getline(std::cin, this->Number);
-	if(this->Number.empty())
+	std::getline(std::cin, num);
+	if(num.empty())
 		{
 			std::cout << "No Number input detected ...restart" << std::endl;
 			return(this->saveContact(id));
-		}			
+		}		
+	this->setNumber(num);		
 	std::cout << "Please enter your darkest secret" << std::endl;
-	std::getline(std::cin, this->Secret);
-	if(this->Secret.empty())
+	std::getline(std::cin, sec);
+	if(sec.empty())
 		{
 			std::cout << "No Secret input detected ...restart" << std::endl;
 			return(this->saveContact(id));
-		}		
+		}
+	this->setSecret(sec);			
 	return (true);
 }
 

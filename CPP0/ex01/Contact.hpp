@@ -6,7 +6,7 @@
 /*   By: rdi-russ <rdi-russ@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:59:11 by rdi-russ          #+#    #+#             */
-/*   Updated: 2023/01/30 12:59:12 by rdi-russ         ###   ########.fr       */
+/*   Updated: 2023/02/01 18:14:59 by rdi-russ         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@
 #include <iostream>
 class Contact
 {
-    public:
-		Contact();
-		~Contact();
+	private:
 		int			index;
 		std::string	FirstName;
 		std::string	LastName;
 		std::string	NickName;
 		std::string	Number;
 		std::string	Secret;
+    public:
+		Contact();
+		~Contact();
 
 		std::string	getIndex();
 		std::string	getFirstName();
@@ -32,13 +33,14 @@ class Contact
 		std::string	getNickName();
 		std::string	getNumber();
 		std::string	getSecret();
-		/*
+		
+		void		setIndex(int index);
 		void		setFirstName(std::string fn);
-		void		setLastName(std::string fn);
-		void		setNickName(std::string fn);
-		void		setNumber(std::string fn);
-		void		setSecret(std::string fn);
-		*/
+		void		setLastName(std::string ln);
+		void		setNickName(std::string nm);
+		void		setNumber(std::string num);
+		void		setSecret(std::string sec);
+
 		bool			saveContact(int id);
 		void			getContactById(void);
 		void			getAllContacts(void);
