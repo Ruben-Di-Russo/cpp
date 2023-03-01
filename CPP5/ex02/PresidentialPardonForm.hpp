@@ -5,17 +5,19 @@
 #include <iostream>
 #include "Form.hpp"
 
+class Bureaucrat;
+
 class PPF : public Form
 {
     private:
-        
+        std::string target;
     public:
 
-        PPF();
+        PPF(std::string target);
         PPF &operator=(const PPF &stats);
         PPF(const PPF &copy);
+        void execute(Bureaucrat const & executor) const ;
         ~PPF();
-
 };
 
 #endif

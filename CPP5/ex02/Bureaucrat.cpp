@@ -17,14 +17,33 @@ Bureaucrat::Bureaucrat( const std::string& name, int grade ) : name(name), grade
     }
 }
 
-void Bureaucrat::signForm(Form x)
+void Bureaucrat::executeForm(Form &form) const
 {
-    if(x.getsign())
+    try
     {
+        form.execute(*this);
+        std::cout << form.getname() << " executed" << std::endl;
+    }
+    catch(const std::exception& e)
+    {   
+        std::cout<<e.what()<<std::endl;
+        std::cout << form.getname() << " not executed" << std::endl;
+    }
+}
+
+
+void Bureaucrat::signForm(Form &x) const
+{
+    try
+    {
+        x.getsign();
         std::cout << this->name <<  " signed " << x.getname() << std::endl;
     }
-    else
+    catch(const std::exception& e)
+    {
+        std::cout<<e.what()<<std::endl;
         std::cout << this->name <<  " couldn't signed " << x.getname() << "Grade too low" << std::endl;
+    }
 }
 void Bureaucrat::increment()
 {
@@ -36,7 +55,7 @@ void Bureaucrat::decrement()
     this->grade++;
 }
 
-int Bureaucrat::getgrade()
+int Bureaucrat::getgrade() const
 {
     return(this->grade);
 }

@@ -21,10 +21,14 @@ class Form
         Form();
         Form( const std::string& name, int grade, const int exe);
 
-        bool getsign();
+        int getexe(void) const;
+        int getgrade(void) const;
+        void setsign();
+        bool getsign() const;
         void beSigned(Bureaucrat x);
-        std::string getname();
-        ~Form();
+        std::string getname() const;
+        virtual void execute(Bureaucrat const & executor) const = 0;
+        virtual ~Form();
     class GradeTooHighException : public std::exception
     {
     public:
@@ -43,4 +47,5 @@ class Form
     };
 
 }; 
+
 #endif

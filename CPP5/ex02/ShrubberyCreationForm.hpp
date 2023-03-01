@@ -5,17 +5,19 @@
 #include <iostream>
 #include "Form.hpp"
 
+class Bureaucrat;
+
 class SCF : public Form
 {
     private:
-        
+        std::string target;
     public:
 
-        SCF();
+        SCF(std::string target);
         SCF &operator=(const SCF &stats);
         SCF(const SCF &copy);
+        void execute(Bureaucrat const & executor) const ;
         ~SCF();
-
 };
 
 #endif

@@ -22,9 +22,9 @@ class Bureaucrat
         Bureaucrat(const Bureaucrat &copy);
         void increment();
         void decrement();
-        int getgrade();
-        void signForm(Form x);
-
+        int getgrade() const;
+        void signForm(Form &x) const;
+        void executeForm(Form &form) const;
         std::string getname();
         ~Bureaucrat();
     class GradeTooHighException : public std::exception

@@ -13,22 +13,35 @@ Form::Form( const std::string& name, const int grade, const int exe) : name(name
     }
 }
 
-bool Form::getsign()
+bool Form::getsign() const
 {
     return(this->sign);
 }
 
-std::string Form::getname()
+int Form::getexe(void) const
+{
+    return (this->exe);
+}
+
+int Form::getgrade(void) const
+{
+    return (this->grade);
+}
+
+std::string Form::getname() const
 {
     return(this->name);
+}
+
+void Form::setsign()
+{
+    this->sign = true;
 }
 
 void Form::beSigned(Bureaucrat x)
 {
     if(this->grade < x.getgrade())
-    {
         throw Form::GradeTooLowException();
-    }
     else 
         this->sign = true;
 }
