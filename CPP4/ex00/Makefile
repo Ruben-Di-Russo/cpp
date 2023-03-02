@@ -1,9 +1,13 @@
-NAME	=	megaphone
+NAME	=	Animal
 CC		=	c++
 CFLAGS	=	-std=c++98 -Wall -Wextra -Werror
 
-SRCS	=	megaphone.cpp 
-
+SRCS	=	main.cpp \
+			Animal.cpp \
+			Cat.cpp \
+			Dog.cpp \
+			WrongAnimal.cpp \
+			WrongCat.cpp
 			
 all		:	$(NAME)
 

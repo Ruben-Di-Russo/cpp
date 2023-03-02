@@ -1,24 +1,23 @@
-#ifndef SCF_HPP
-#define SCF_HPP
+#ifndef PPF_HPP
+#define PPF_HPP
 
 #include <string.h>
 #include <iostream>
-#include <fstream>
 #include "Form.hpp"
 
 class Bureaucrat;
 
-class SCF : public Form
+class PPF : public Form
 {
     private:
         std::string target;
     public:
 
-        SCF(std::string target);
-        SCF &operator=(const SCF &stats);
-        SCF(const SCF &copy);
+        PPF(std::string target);
+        PPF &operator=(const PPF &stats);
+        PPF(const PPF &copy);
         void execute(Bureaucrat const & executor) const ;
-        ~SCF();
+        ~PPF();
 };
 
 #endif

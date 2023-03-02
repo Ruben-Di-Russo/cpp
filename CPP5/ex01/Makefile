@@ -1,12 +1,10 @@
-NAME	=	Animal
+NAME	=	Bureaucrat
 CC		=	c++
 CFLAGS	=	-std=c++98 -Wall -Wextra -Werror
 
 SRCS	=	main.cpp \
-			Animal.cpp \
-			Cat.cpp \
-			Dog.cpp \
-			Brain.cpp
+			Bureaucrat.cpp \
+			Form.cpp
 
 			
 all		:	$(NAME)

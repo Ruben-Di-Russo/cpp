@@ -3,7 +3,7 @@
 SCF::SCF(std::string target) : Form("Presidential Pardon Form", 145, 137)
 {
     this->target = target;
-    std::cout << "Form has been created" << std::endl;
+    // std::cout << "Form has been created" << std::endl;
 }
 
 void SCF::execute(Bureaucrat const & executor) const
