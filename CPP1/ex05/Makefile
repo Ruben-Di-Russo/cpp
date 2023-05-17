@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rdi-russ <rdi-russ@student.42.fr>          +#+  +:+       +#+         #
+#    By: rdi-russ <rdi-russ@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/24 02:17:38 by rdi-russ          #+#    #+#              #
-#    Updated: 2023/01/30 15:24:33 by rdi-russ         ###   ########.fr        #
+#    Updated: 2023/03/23 19:25:55 by rdi-russ         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC		=	c++
 CFLAGS	=	-std=c++98 -Wall -Wextra -Werror
 
 SRCS	=	main.cpp \
-			Harl.cpp 
+			Harl.cpp
 			
 
 			

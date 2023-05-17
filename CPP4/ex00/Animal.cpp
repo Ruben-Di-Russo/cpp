@@ -2,7 +2,7 @@
 
 Animal::Animal()
 {
-    return ;
+    std::cout << "Animal constructor called " << std::endl;
 }
 
 
@@ -24,7 +24,7 @@ Animal &Animal::operator=( const Animal &stats )
 
 Animal:: ~Animal()
 {
-   return ;
+    std::cout << "Animal destructor called " << std::endl;
 }
 
 void    Animal::makeSound() const

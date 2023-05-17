@@ -5,6 +5,8 @@
 
 int main()
 {
+    // Animal error;
+
     Animal *obj = new Cat();
     delete obj;
     return (0);

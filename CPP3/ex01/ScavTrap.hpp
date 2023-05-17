@@ -8,10 +8,10 @@
 class ScavTrap : public ClapTrap
 {
     private:
-        std::string name;
-        unsigned int hp;
-        unsigned int atk;
-        unsigned int eng;
+        // std::string name;
+        // unsigned int hp;
+        // unsigned int atk;
+        // unsigned int eng;
     public:
         void guardGate(void);
         ScavTrap();

@@ -8,6 +8,8 @@ int main ()
     Base* b;
     b = generate();
     identify(c);
+    identify(*c);
+    identify(b);
     identify(*b);
 
     delete c;

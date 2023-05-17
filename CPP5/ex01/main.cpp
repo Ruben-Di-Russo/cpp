@@ -4,12 +4,13 @@
 
 int main(void)
 {
-    Bureaucrat *meta = new Bureaucrat("ruben", 100);
+    Bureaucrat *meta = new Bureaucrat("ruben", 1);
     try {
         Form *beta = new Form("ruben_form", 1, 10);
         try{
             beta->beSigned(*meta);
             meta->signForm(*beta);
+            std::cout << *beta;
         } catch (Form::GradeTooLowException &e) {
             std::cout<<e.what()<<std::endl;
             meta->signForm(*beta);

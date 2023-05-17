@@ -4,6 +4,7 @@
 Cat::Cat()
 {
     this->type = "Cat";
+    std::cout << this->type << " constructor called " << std::endl;
 }
 
 
@@ -22,7 +23,7 @@ Cat &Cat::operator=( const Cat &stats )
 
 Cat:: ~Cat()
 {
-    return ;
+    std::cout << this->type << " destructor called " << std::endl;
 }
 
 void    Cat::makeSound() const

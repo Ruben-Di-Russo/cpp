@@ -13,14 +13,24 @@ Form::Form( const std::string& name, const int grade, const int exe) : name(name
     }
 }
 
-bool Form::getsign()
+bool Form::getsign() const
 {
     return(this->sign);
 }
 
-std::string Form::getname()
+std::string Form::getname() const
 {
     return(this->name);
+}
+
+int Form::getgrade() const
+{
+    return(this->grade);
+}
+
+int Form::getexe() const
+{
+    return(this->exe);
 }
 
 void Form::beSigned(Bureaucrat x)
@@ -31,6 +41,12 @@ void Form::beSigned(Bureaucrat x)
     }
     else 
         this->sign = true;
+}
+
+std::ostream & operator<<(std::ostream &stream, const Form &object)
+{
+	stream << "form: " << object.getname() << ", grade: " << object.getgrade() << ", exe: " << object.getexe() << ", signed: " << object.getsign() << std::endl;
+	return stream;
 }
 
 Form:: ~Form()

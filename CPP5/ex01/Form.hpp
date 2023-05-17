@@ -14,16 +14,16 @@ class Form
     bool sign;
     const int grade;
     const int exe;
-    protected:
-        std::string type;
-        
+
     public:
         Form();
         Form( const std::string& name, int grade, const int exe);
 
-        bool getsign();
+        std::string getname() const;
+        bool getsign() const;
+        int getgrade() const;
+        int getexe() const;
         void beSigned(Bureaucrat x);
-        std::string getname();
         ~Form();
     class GradeTooHighException : public std::exception
     {
@@ -41,6 +41,6 @@ class Form
             return "Grade too low"; 
         }
     };
-
 }; 
+std::ostream & operator<<(std::ostream &stream, const Form &object);
 #endif

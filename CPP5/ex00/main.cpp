@@ -8,8 +8,8 @@ int main(void)
         Bureaucrat test1("simo", 100);
         test1.decrement();
         meta->increment();
-        std::cout<<"Test increment " << test1.getname() << " grade " << test1.getgrade() << std::endl;
-        std::cout<<"Test increment " << meta->getname() <<  " grade " << meta->getgrade() << std::endl;
+        std::cout<< *meta;
+        std::cout<< test1;
         
     } catch (Bureaucrat::GradeTooHighException &e) {
         std::cout<<e.what()<<std::endl;

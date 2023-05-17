@@ -4,6 +4,8 @@
 WrongCat::WrongCat()
 {
     this->type = "WrongCat";
+    std::cout << this->type << " constructor called " << std::endl;
+
 }
 
 
@@ -22,5 +24,5 @@ WrongCat &WrongCat::operator=( const WrongCat &stats )
 
 WrongCat:: ~WrongCat()
 {
-    return ;
+    std::cout << this->type << " destructor called " << std::endl;
 }

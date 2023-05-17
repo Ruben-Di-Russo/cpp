@@ -4,28 +4,43 @@
 #include "WrongCat.hpp"
 int main()
 {
+    std::cout << " " << std::endl;
+    std::cout << "  CALLING CONSTRUCTOR " << std::endl;
+    std::cout << " " << std::endl;
 
+    const Animal* _animal_ = new Animal();
+    const Animal* _dog_ = new Dog();
+    const Animal* _cat_ = new Cat();
+    const WrongAnimal* _wAnimal_ = new WrongAnimal();
+    const WrongAnimal* _wCat_ = new WrongCat();
 
+    std::cout << " " << std::endl;
+    std::cout << "  CALLING TYPE " << std::endl;
+    std::cout << " " << std::endl;
 
-const Animal* meta = new Animal();
-const Animal* j = new Dog();
-const Animal* i = new Cat();
-const WrongAnimal* k = new WrongCat();
-std::cout << j->getType() << " " << std::endl;
-std::cout << i->getType() << " " << std::endl;
+    std::cout << _dog_->getType() << " " << std::endl;
+    std::cout << _cat_->getType() << " " << std::endl;
+    std::cout << _wCat_->getType() << " " << std::endl;
 
+    std::cout << " " << std::endl;
+    std::cout << "  CALLING VERSE " << std::endl;
+    std::cout << " " << std::endl;
 
-i->makeSound(); //will output the cat sound!
-j->makeSound();
-k->makeSound();
-meta->makeSound();
+    _animal_->makeSound();
+    _dog_->makeSound();
+    _cat_->makeSound();
+    _wAnimal_->makeSound();
+    _wCat_->makeSound();
 
-delete i;
-delete k;
-delete j;
-delete meta;
+    std::cout << " " << std::endl;
+    std::cout << "  CALLING DECONSTRUCTOR " << std::endl;
+    std::cout << " " << std::endl;
 
+    delete _animal_;
+    delete _dog_;
+    delete _cat_;
+    delete _wAnimal_;
+    delete _wCat_;
 
-return 0;
-
+    return 0;
 }

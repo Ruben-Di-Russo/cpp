@@ -8,10 +8,6 @@
 class FragTrap : public ClapTrap
 {
     private:
-        std::string name;
-        unsigned int hp;
-        unsigned int atk;
-        unsigned int eng;
     public:
         void highFivesGuys(void);
         void attack(const std::string &target);

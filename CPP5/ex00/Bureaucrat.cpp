@@ -9,11 +9,11 @@ Bureaucrat::Bureaucrat( const std::string& name, int grade ) : name(name), grade
 {
     if(grade > 150)
     {
-        throw Bureaucrat::GradeTooHighException();
+        throw Bureaucrat::GradeTooLowException();
     }
     else if(grade < 1)
     {
-        throw Bureaucrat::GradeTooLowException();
+        throw Bureaucrat::GradeTooHighException();
     }
     std::cout << "Bureaucrat " << " constructor called" << std::endl;
 }
@@ -21,19 +21,23 @@ Bureaucrat::Bureaucrat( const std::string& name, int grade ) : name(name), grade
 void Bureaucrat::increment()
 {
     this->grade--;
+    if(this->grade < 1)
+        throw Bureaucrat::GradeTooHighException();
 }
 
 void Bureaucrat::decrement()
 {
     this->grade++;
+    if(this->grade > 150)
+        throw Bureaucrat::GradeTooLowException();
 }
 
-int Bureaucrat::getgrade()
+int Bureaucrat::getgrade() const
 {
     return(this->grade);
 }
 
-std::string Bureaucrat::getname()
+std::string Bureaucrat::getname() const
 {
     return(this->name);
 }
@@ -47,6 +51,12 @@ Bureaucrat &Bureaucrat::operator=( const Bureaucrat &stats )
 {
     this->grade = stats.grade;
     return (*this);
+}
+
+std::ostream & operator<<(std::ostream &stream, const Bureaucrat &object)
+{
+	stream << "bureaucrat: " << object.getname() << ", " << object.getgrade() << std::endl;
+	return stream;
 }
 
 Bureaucrat:: ~Bureaucrat()

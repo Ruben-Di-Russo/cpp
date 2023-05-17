@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdi-russ <rdi-russ@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rdi-russ <rdi-russ@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:58:27 by rdi-russ          #+#    #+#             */
-/*   Updated: 2023/01/31 17:16:42 by rdi-russ         ###   ########.fr       */
+/*   Updated: 2023/03/28 16:33:14 by rdi-russ         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
+// ldapsearch uid=enoviell
 
 int main(int ac, char **av)
 {

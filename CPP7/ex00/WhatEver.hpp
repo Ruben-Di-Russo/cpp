@@ -10,7 +10,6 @@ template <typename t_swap> void swap(t_swap &a, t_swap &b)
     tmp = a;
     a = b;
     b = tmp;
-
 }
 
 template <typename t_max> t_max max(t_max a, t_max b)

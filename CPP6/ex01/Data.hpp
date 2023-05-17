@@ -5,13 +5,15 @@
 #include <iostream>
 #include <cstdint>
 
-struct Data
+typedef struct Data
 {
     std::string name;
     int age;
-};
+} Data;
 
+static uintptr_t serialize(Data* ptr);
+static Data* deserialize(uintptr_t raw);
 
-uintptr_t serialize(Data* ptr);
-Data* deserialize(uintptr_t raw);
+std::ostream&	operator<<( std::ostream& stream, const Data& obj);
+
 #endif

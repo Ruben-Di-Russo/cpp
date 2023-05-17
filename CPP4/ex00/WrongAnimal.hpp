@@ -16,7 +16,7 @@ class WrongAnimal
         WrongAnimal(std::string name);
         WrongAnimal    &operator=(const WrongAnimal &stats);
         WrongAnimal(const WrongAnimal &copy);
-        ~WrongAnimal();
+        virtual ~WrongAnimal();
 
 };
 

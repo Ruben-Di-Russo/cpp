@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdi-russ <rdi-russ@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rdi-russ <rdi-russ@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 19:13:58 by rdi-russ          #+#    #+#             */
-/*   Updated: 2023/01/25 17:39:01 by rdi-russ         ###   ########.fr       */
+/*   Updated: 2023/03/30 15:58:38 by rdi-russ         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,22 @@ int main(void)
     std::string s = "HI THIS IS BRAIN";
     std::string *stringPTR = &s;
     std::string &stringREF = s;
+    std::string stringref2 = s;
+    
     
     std::cout << &s << std::endl;
-    std::cout << &stringPTR << std::endl;
+    std::cout << stringPTR << std::endl;
     std::cout << &stringREF << std::endl;
-    
+    std::cout << &stringref2 << std::endl;
+
     std::cout << s << std::endl;
     std::cout << *stringPTR << std::endl;
     std::cout << stringREF << std::endl;
+    
+    stringREF = "ciao";
+    std::cout << s << std::endl;
+    std::cout << *stringPTR << std::endl;
+    std::cout << stringREF << std::endl;
+    
     return(0);
 }

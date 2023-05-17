@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rdi-russ <rdi-russ@student.42.fr>          +#+  +:+       +#+         #
+#    By: rdi-russ <rdi-russ@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/24 02:17:38 by rdi-russ          #+#    #+#              #
-#    Updated: 2023/01/26 19:50:28 by rdi-russ         ###   ########.fr        #
+#    Updated: 2023/03/30 16:21:57 by rdi-russ         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	replace
 CC		=	c++
-CFLAGS	=	-std=c++98 -Wall -Wextra -Werror
+CFLAGS	=	-std=c++98 -Wall -Wextra -Werror -g
 
 SRCS	=	main.cpp 
 			
