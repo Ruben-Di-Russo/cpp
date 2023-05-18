@@ -63,7 +63,7 @@ void	Span::fillSpan(unsigned int value)
 {
     int k;
 	k = 0;
-    for (int i = 0; i < value; i++)
+    for (unsigned int i = 0; i < value; i++)
     {   
         srand(time(0));
         int random = rand() % 20+1;  

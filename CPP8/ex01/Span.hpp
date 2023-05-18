@@ -10,7 +10,7 @@ class Span
 {
     private:
         unsigned int        n;
-        int                 stored;
+        unsigned int                 stored;
         std::vector<int>    data;
 
     public:
