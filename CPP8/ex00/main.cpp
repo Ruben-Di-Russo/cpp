@@ -10,5 +10,5 @@ int main()
     cont.push_back(3);
     cont.push_back(4);
     cont.push_back(5);
-    easyfind(cont, 3);
+    easyfind(cont, 9);
 }

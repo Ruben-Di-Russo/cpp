@@ -34,27 +34,28 @@ void Span::addNumber(const int number)
 
 int		Span::longestSpan(void) const
 {
+	std::vector<int>  copy = data;
     int min;
     int max;
 	if (stored <= 1)
 		throw Span::notEnoughNumbers();
-
-	min = findmin(data);
-	max = findmax(data);
+	std::sort(copy.begin(), copy.end());
+	min = *std::min_element(copy.begin(), copy.end());
+	max = *std::max_element(copy.begin(), copy.end());
 	return (max - min);
 }
 
 int		Span::shortestSpan(void) const
 {
-	std::vector<int>	copy = data;
+	std::vector<int>	copy2 = data;
 	long				minSpan = std::numeric_limits<long>::max();
 
 	if (stored <= 1)
 		throw Span::notEnoughNumbers();
 	
-	sort(copy.begin(), copy.end());
+	sort(copy2.begin(), copy2.end());
 	for (size_t i = 0; i + 1 < data.size(); i++)
-		minSpan = std::min(minSpan, static_cast<long>(copy[i + 1] - copy[i]));
+		minSpan = std::min(minSpan, static_cast<long>(copy2[i + 1] - copy2[i]));
 	return (minSpan);
 }
 
