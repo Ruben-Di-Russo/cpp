@@ -21,7 +21,7 @@ class Span
         void	addNumber(const int n);
         int		shortestSpan(void) const;
 		int		longestSpan(void) const;
-        void    fillSpan(int value);
+        void    fillSpan(unsigned int value);
         ~Span();
 
         class alreadyFull : public std::exception

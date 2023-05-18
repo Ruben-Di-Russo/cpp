@@ -2,8 +2,8 @@
 
 int main()
 {
-    Span c(15001);
-    c.fillSpan(15000);
+    Span c(967294);
+    c.fillSpan(967294);
     std::cout << c.longestSpan() << std::endl;
     std::cout << c.shortestSpan() << std::endl;
 }

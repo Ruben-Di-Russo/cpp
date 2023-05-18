@@ -5,20 +5,19 @@
 #include <iostream>
 #include <algorithm>
 
-
-template <typename t_find> void easyfind(t_find a, int b)
+template <typename t_find>
+void easyfind(t_find a, int b)
 {
-    for(int i = 0; i < a.size(); i++)
+    std::vector<int>::iterator it;
+    it = std::find(a.begin(), a.end(), b);
+    if (it != a.end())
     {
-        if (a[i] == b)
-        {
-            std::find(3)
-            std::cout << "occurence finded" << std::endl;
-            return ;
-        }
+        std::cout << "Element " << std::endl;
     }
-    std::cout << "occurence don't finded" << std::endl;
+    else
+        std::cout << "Element not found." << std::endl;
 
+    return ;
 }
 
 #endif

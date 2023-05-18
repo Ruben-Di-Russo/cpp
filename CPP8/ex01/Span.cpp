@@ -58,7 +58,7 @@ int		Span::shortestSpan(void) const
 	return (minSpan);
 }
 
-void	Span::fillSpan(int value)
+void	Span::fillSpan(unsigned int value)
 {
     int k;
 	k = 0;
