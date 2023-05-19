@@ -21,11 +21,11 @@ std::vector<int> merge(const std::vector<int>& left, const std::vector<int>& rig
         merged.push_back(left[i]);
         i++;
     }
-
     while (j < right.size()) {
         merged.push_back(right[j]);
         j++;
     }
+    int m = 0;
 
     return merged;
 }
@@ -35,7 +35,6 @@ std::vector<int> mergeInsertionSort(const std::vector<int>& array) {
     if (array.size() <= 1) {
         return array;
     }
-
     // Divide l'array a metà
     size_t mid = array.size() / 2;
     std::vector<int> left(array.begin(), array.begin() + mid);
