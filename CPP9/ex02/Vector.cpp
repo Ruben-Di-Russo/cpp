@@ -1,5 +1,4 @@
-#include <iostream>
-#include <vector>
+#include "Vector.hpp"
 
 // Funzione per l'unione di due vettori ordinati
 std::vector<int> merge(const std::vector<int>& left, const std::vector<int>& right) {
