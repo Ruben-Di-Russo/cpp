@@ -25,8 +25,6 @@ std::vector<int> merge(const std::vector<int>& left, const std::vector<int>& rig
         merged.push_back(right[j]);
         j++;
     }
-    int m = 0;
-
     return merged;
 }
 

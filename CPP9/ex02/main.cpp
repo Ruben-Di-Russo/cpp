@@ -13,7 +13,7 @@ int doSort(std::vector<int> array, std::deque<int> myDeque)
     std::cout << std::endl;
     int i = 0;
     std::cout << "Array non ordinato: ";
-    while(i < array.size())
+    while(i < static_cast<int>(array.size()))
     {
         std::cout << array[i] << " ";
         i++;
@@ -22,7 +22,7 @@ int doSort(std::vector<int> array, std::deque<int> myDeque)
     std::cout << std::endl;
     i = 0;
     std::cout << "Deque non ordinato: ";
-    while(i < myDeque.size())
+    while(i < static_cast<int>(myDeque.size()))
     {
       std::cout << myDeque[i] << " ";
         i++;
@@ -42,7 +42,7 @@ int doSort(std::vector<int> array, std::deque<int> myDeque)
     
     std::cout << "Array ordinato: ";
     i = 0;
-    while(i < sortedArray.size())
+    while(i < static_cast<int>(sortedArray.size()))
     {
         std::cout << sortedArray[i] << " ";
         i++;
@@ -50,7 +50,7 @@ int doSort(std::vector<int> array, std::deque<int> myDeque)
     std::cout << std::endl;
     i = 0;
     std::cout << "Deque ordinato: ";
-    while(i < sortedDeque.size())
+    while(i < static_cast<int>(sortedDeque.size()))
     {
         std::cout << sortedDeque[i] << " ";
         i++;
@@ -100,7 +100,7 @@ std::deque<int> fillContDeque(std::string risultato)
             std::cerr << "Error: " << e.what() << std::endl;
         }
     }
-    for (int j = 0; j < values.size(); j++)
+    for (int j = 0; j < static_cast<int>(myDeque.size()); j++)
     {
             myDeque.push_back(values[j]);
     }
@@ -144,7 +144,7 @@ std::vector<int> fillContVec(std::string risultato)
             std::cerr << "Error: " << e.what() << std::endl;
         }
     }
-    for (int j = 0; j < values.size(); j++)
+    for (int j = 0; j < static_cast<int>(array.size()); j++)
     {
             array.push_back(values[j]);
     }
@@ -161,7 +161,7 @@ void doCommand (std::string comando){
                // std::cout << risultato;
             }
         }
-    if(doSort(fillContVec(risultato),fillContDeque(risultato)) == 1)
+    if(doSort(fillContVec(risultato),fillContDeque(risultato)) == 0)
         {
             std::cout << "Argument error"<< std::endl;
             return ;
@@ -209,11 +209,13 @@ int main(int argc, char **argv) {
     {
         if (checkArgv(valore) == 1)
             return (1);
-        if(doSort(fillContVec(valore),fillContDeque(valore)) == 1)
+        if(doSort(fillContVec(valore),fillContDeque(valore)) == 0)
         {
-            std::cout << "Argument error"<< std::endl;
+            std::cout << "Argument error 2"<< std::endl;
             return (1);
         }
+        else
+            doSort(fillContVec(valore),fillContDeque(valore));
     }
     
     return 0;
