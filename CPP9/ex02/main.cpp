@@ -10,11 +10,10 @@ int doSort(std::vector<int> array, std::deque<int> myDeque)
 {
     if (array.empty() || myDeque.empty())
         return(1);
-    std::vector<int>::size_type size = array.size();
     std::cout << std::endl;
-    int i = 0;
+    std::vector<int>::size_type i = 0;
     std::cout << "Array non ordinato: ";
-    while(i < size)
+    while(i < array.size())
     {
         std::cout << array[i] << " ";
         i++;
@@ -23,7 +22,7 @@ int doSort(std::vector<int> array, std::deque<int> myDeque)
     std::cout << std::endl;
     i = 0;
     std::cout << "Deque non ordinato: ";
-    while(i < size)
+    while(i < array.size())
     {
       std::cout << myDeque[i] << " ";
         i++;
@@ -43,7 +42,7 @@ int doSort(std::vector<int> array, std::deque<int> myDeque)
     
     std::cout << "Array ordinato: ";
     i = 0;
-    while(i < size)
+    while(i < array.size())
     {
         std::cout << sortedArray[i] << " ";
         i++;
@@ -51,7 +50,7 @@ int doSort(std::vector<int> array, std::deque<int> myDeque)
     std::cout << std::endl;
     i = 0;
     std::cout << "Deque ordinato: ";
-    while(i < size)
+    while(i < array.size())
     {
         std::cout << sortedDeque[i] << " ";
         i++;
@@ -101,8 +100,7 @@ std::deque<int> fillContDeque(std::string risultato)
             std::cerr << "Error: " << e.what() << std::endl;
         }
     }
-    std::vector<int>::size_type size = values.size();
-    for (int j = 0; j < size; j++)
+    for (std::vector<int>::size_type j = 0; j < values.size(); j++)
     {
             myDeque.push_back(values[j]);
     }
@@ -146,8 +144,7 @@ std::vector<int> fillContVec(std::string risultato)
             std::cerr << "Error: " << e.what() << std::endl;
         }
     }
-    std::vector<int>::size_type size = values.size();
-    for (int j = 0; j < size; j++)
+    for (std::vector<int>::size_type j = 0; j < values.size(); j++)
     {
             array.push_back(values[j]);
     }
